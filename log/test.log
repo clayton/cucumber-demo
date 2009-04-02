@@ -453,3 +453,206 @@ Completed in 6ms (View: 4, DB: 0) | 200 OK [http://www.example.com/interns]
   [4;36;1mIntern Create (0.7ms)[0m   [0;1mINSERT INTO "interns" ("number", "created_at", "smell", "updated_at", "skills", "indentured_servant") VALUES(5678, '2009-04-02 07:00:13', 'bad', '2009-04-02 07:00:13', 'nothing, to, impressive', 't')[0m
   [4;35;1mIntern Create (0.2ms)[0m   [0mINSERT INTO "interns" ("number", "created_at", "smell", "updated_at", "skills", "indentured_servant") VALUES(1234, '2009-04-02 07:00:13', 'tolerable', '2009-04-02 07:00:13', 'nothing, to, impressive', 'f')[0m
   [4;36;1mIntern Load (0.4ms)[0m   [0;1mSELECT * FROM "interns" [0m
+  [4;36;1mIntern Create (0.4ms)[0m   [0;1mINSERT INTO "interns" ("updated_at", "number", "smell", "indentured_servant", "skills", "created_at") VALUES('2009-04-02 16:56:30', 5678, 'bad', 't', 'nothing, to, impressive', '2009-04-02 16:56:30')[0m
+  [4;35;1mIntern Create (0.1ms)[0m   [0mINSERT INTO "interns" ("updated_at", "number", "smell", "indentured_servant", "skills", "created_at") VALUES('2009-04-02 16:56:30', 1234, 'tolerable', 'f', 'nothing, to, impressive', '2009-04-02 16:56:30')[0m
+  [4;36;1mIntern Load (0.3ms)[0m   [0;1mSELECT * FROM "interns" [0m
+REQUESTING PAGE: GET /interns with {} and HTTP headers {}
+
+
+Processing InternsController#index (for 127.0.0.1 at 2009-04-02 09:56:30) [GET]
+  [4;35;1mIntern Load (0.2ms)[0m   [0mSELECT * FROM "interns" [0m
+Rendering template within layouts/application
+Rendering interns/index
+Completed in 97ms (View: 94, DB: 1) | 200 OK [http://www.example.com/interns]
+REQUESTING PAGE: GET /interns/new with {} and HTTP headers {"HTTP_REFERER"=>"/interns"}
+
+
+Processing InternsController#new (for 127.0.0.1 at 2009-04-02 09:56:30) [GET]
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/interns/new]
+REQUESTING PAGE: GET /interns/new with {} and HTTP headers {}
+
+
+Processing InternsController#new (for 127.0.0.1 at 2009-04-02 09:56:30) [GET]
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://www.example.com/interns/new]
+REQUESTING PAGE: GET /interns/new with {} and HTTP headers {}
+
+
+Processing InternsController#new (for 127.0.0.1 at 2009-04-02 09:56:30) [GET]
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://www.example.com/interns/new]
+  [4;36;1mIntern Create (0.4ms)[0m   [0;1mINSERT INTO "interns" ("updated_at", "number", "smell", "indentured_servant", "skills", "created_at") VALUES('2009-04-02 17:01:21', 5678, 'bad', 't', 'nothing, to, impressive', '2009-04-02 17:01:21')[0m
+  [4;35;1mIntern Create (0.1ms)[0m   [0mINSERT INTO "interns" ("updated_at", "number", "smell", "indentured_servant", "skills", "created_at") VALUES('2009-04-02 17:01:21', 1234, 'tolerable', 'f', 'nothing, to, impressive', '2009-04-02 17:01:21')[0m
+  [4;36;1mIntern Load (0.3ms)[0m   [0;1mSELECT * FROM "interns" [0m
+REQUESTING PAGE: GET /interns with {} and HTTP headers {}
+
+
+Processing InternsController#index (for 127.0.0.1 at 2009-04-02 10:01:21) [GET]
+  [4;35;1mIntern Load (0.2ms)[0m   [0mSELECT * FROM "interns" [0m
+Rendering template within layouts/application
+Rendering interns/index
+Completed in 77ms (View: 75, DB: 1) | 200 OK [http://www.example.com/interns]
+REQUESTING PAGE: GET /interns/new with {} and HTTP headers {"HTTP_REFERER"=>"/interns"}
+
+
+Processing InternsController#new (for 127.0.0.1 at 2009-04-02 10:01:21) [GET]
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/interns/new]
+REQUESTING PAGE: GET /interns/new with {} and HTTP headers {}
+
+
+Processing InternsController#new (for 127.0.0.1 at 2009-04-02 10:01:21) [GET]
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://www.example.com/interns/new]
+REQUESTING PAGE: POST /interns with {"intern"=>{"number"=>"4567", "smell"=>"bad", "indentured_servant"=>"1", "skills"=>"stocking fridge, being laughed at"}, "commit"=>"Put To Work"} and HTTP headers {"HTTP_REFERER"=>"/interns/new"}
+
+
+Processing InternsController#create (for 127.0.0.1 at 2009-04-02 10:01:21) [POST]
+  Parameters: {"intern"=>{"number"=>"4567", "indentured_servant"=>"1", "smell"=>"bad", "skills"=>"stocking fridge, being laughed at"}, "commit"=>"Put To Work"}
+  [4;36;1mIntern Create (0.4ms)[0m   [0;1mINSERT INTO "interns" ("updated_at", "number", "smell", "indentured_servant", "skills", "created_at") VALUES('2009-04-02 17:01:21', 4567, 'bad', 't', 'stocking fridge, being laughed at', '2009-04-02 17:01:21')[0m
+Redirected to http://www.example.com/interns
+Completed in 3ms (DB: 0) | 302 Found [http://www.example.com/interns]
+REQUESTING PAGE: GET http://www.example.com/interns with {} and HTTP headers {"HTTP_REFERER"=>"/interns"}
+
+
+Processing InternsController#index (for 127.0.0.1 at 2009-04-02 10:01:21) [GET]
+  [4;35;1mIntern Load (0.3ms)[0m   [0mSELECT * FROM "interns" [0m
+Rendering template within layouts/application
+Rendering interns/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://www.example.com/interns]
+REQUESTING PAGE: GET /interns/new with {} and HTTP headers {}
+
+
+Processing InternsController#new (for 127.0.0.1 at 2009-04-02 10:01:21) [GET]
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://www.example.com/interns/new]
+REQUESTING PAGE: POST /interns with {"intern"=>{"number"=>"Andrew", "smell"=>"tolerable", "indentured_servant"=>"0", "skills"=>""}, "commit"=>"Put To Work"} and HTTP headers {"HTTP_REFERER"=>"/interns/new"}
+
+
+Processing InternsController#create (for 127.0.0.1 at 2009-04-02 10:01:21) [POST]
+  Parameters: {"intern"=>{"number"=>"Andrew", "indentured_servant"=>"0", "smell"=>"tolerable", "skills"=>""}, "commit"=>"Put To Work"}
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://www.example.com/interns]
+  [4;36;1mIntern Create (0.4ms)[0m   [0;1mINSERT INTO "interns" ("updated_at", "number", "smell", "indentured_servant", "skills", "created_at") VALUES('2009-04-02 17:02:20', 5678, 'bad', 't', 'nothing, to, impressive', '2009-04-02 17:02:20')[0m
+  [4;35;1mIntern Create (0.1ms)[0m   [0mINSERT INTO "interns" ("updated_at", "number", "smell", "indentured_servant", "skills", "created_at") VALUES('2009-04-02 17:02:20', 1234, 'tolerable', 'f', 'nothing, to, impressive', '2009-04-02 17:02:20')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+REQUESTING PAGE: GET /interns with {} and HTTP headers {}
+
+
+Processing InternsController#index (for 127.0.0.1 at 2009-04-02 10:02:20) [GET]
+  [4;35;1mIntern Load (0.2ms)[0m   [0mSELECT * FROM "interns" [0m
+Rendering template within layouts/application
+Rendering interns/index
+Completed in 78ms (View: 75, DB: 1) | 200 OK [http://www.example.com/interns]
+REQUESTING PAGE: GET /interns/new with {} and HTTP headers {"HTTP_REFERER"=>"/interns"}
+
+
+Processing InternsController#new (for 127.0.0.1 at 2009-04-02 10:02:20) [GET]
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/interns/new]
+REQUESTING PAGE: GET /interns/new with {} and HTTP headers {}
+
+
+Processing InternsController#new (for 127.0.0.1 at 2009-04-02 10:02:20) [GET]
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://www.example.com/interns/new]
+REQUESTING PAGE: POST /interns with {"intern"=>{"number"=>"4567", "smell"=>"bad", "indentured_servant"=>"1", "skills"=>"stocking fridge, being laughed at"}, "commit"=>"Put To Work"} and HTTP headers {"HTTP_REFERER"=>"/interns/new"}
+
+
+Processing InternsController#create (for 127.0.0.1 at 2009-04-02 10:02:20) [POST]
+  Parameters: {"intern"=>{"number"=>"4567", "indentured_servant"=>"1", "smell"=>"bad", "skills"=>"stocking fridge, being laughed at"}, "commit"=>"Put To Work"}
+  [4;36;1mIntern Create (0.5ms)[0m   [0;1mINSERT INTO "interns" ("updated_at", "number", "smell", "indentured_servant", "skills", "created_at") VALUES('2009-04-02 17:02:20', 4567, 'bad', 't', 'stocking fridge, being laughed at', '2009-04-02 17:02:20')[0m
+Redirected to http://www.example.com/interns
+Completed in 3ms (DB: 0) | 302 Found [http://www.example.com/interns]
+REQUESTING PAGE: GET http://www.example.com/interns with {} and HTTP headers {"HTTP_REFERER"=>"/interns"}
+
+
+Processing InternsController#index (for 127.0.0.1 at 2009-04-02 10:02:20) [GET]
+  [4;35;1mIntern Load (0.3ms)[0m   [0mSELECT * FROM "interns" [0m
+Rendering template within layouts/application
+Rendering interns/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://www.example.com/interns]
+REQUESTING PAGE: GET /interns/new with {} and HTTP headers {}
+
+
+Processing InternsController#new (for 127.0.0.1 at 2009-04-02 10:02:20) [GET]
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://www.example.com/interns/new]
+REQUESTING PAGE: POST /interns with {"intern"=>{"number"=>"Andrew", "smell"=>"tolerable", "indentured_servant"=>"0", "skills"=>""}, "commit"=>"Put To Work"} and HTTP headers {"HTTP_REFERER"=>"/interns/new"}
+
+
+Processing InternsController#create (for 127.0.0.1 at 2009-04-02 10:02:20) [POST]
+  Parameters: {"intern"=>{"number"=>"Andrew", "indentured_servant"=>"0", "smell"=>"tolerable", "skills"=>""}, "commit"=>"Put To Work"}
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://www.example.com/interns]
+  [4;36;1mIntern Create (0.4ms)[0m   [0;1mINSERT INTO "interns" ("updated_at", "number", "smell", "indentured_servant", "skills", "created_at") VALUES('2009-04-02 17:02:41', 5678, 'bad', 't', 'nothing, to, impressive', '2009-04-02 17:02:41')[0m
+  [4;35;1mIntern Create (0.1ms)[0m   [0mINSERT INTO "interns" ("updated_at", "number", "smell", "indentured_servant", "skills", "created_at") VALUES('2009-04-02 17:02:41', 1234, 'tolerable', 'f', 'nothing, to, impressive', '2009-04-02 17:02:41')[0m
+  [4;36;1mIntern Load (0.3ms)[0m   [0;1mSELECT * FROM "interns" [0m
+REQUESTING PAGE: GET /interns with {} and HTTP headers {}
+
+
+Processing InternsController#index (for 127.0.0.1 at 2009-04-02 10:02:41) [GET]
+  [4;35;1mIntern Load (0.2ms)[0m   [0mSELECT * FROM "interns" [0m
+Rendering template within layouts/application
+Rendering interns/index
+Completed in 77ms (View: 74, DB: 1) | 200 OK [http://www.example.com/interns]
+REQUESTING PAGE: GET /interns/new with {} and HTTP headers {"HTTP_REFERER"=>"/interns"}
+
+
+Processing InternsController#new (for 127.0.0.1 at 2009-04-02 10:02:41) [GET]
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/interns/new]
+REQUESTING PAGE: GET /interns/new with {} and HTTP headers {}
+
+
+Processing InternsController#new (for 127.0.0.1 at 2009-04-02 10:02:41) [GET]
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://www.example.com/interns/new]
+REQUESTING PAGE: POST /interns with {"intern"=>{"number"=>"4567", "smell"=>"bad", "indentured_servant"=>"1", "skills"=>"stocking fridge, being laughed at"}, "commit"=>"Put To Work"} and HTTP headers {"HTTP_REFERER"=>"/interns/new"}
+
+
+Processing InternsController#create (for 127.0.0.1 at 2009-04-02 10:02:41) [POST]
+  Parameters: {"intern"=>{"number"=>"4567", "indentured_servant"=>"1", "smell"=>"bad", "skills"=>"stocking fridge, being laughed at"}, "commit"=>"Put To Work"}
+  [4;36;1mIntern Create (0.4ms)[0m   [0;1mINSERT INTO "interns" ("updated_at", "number", "smell", "indentured_servant", "skills", "created_at") VALUES('2009-04-02 17:02:41', 4567, 'bad', 't', 'stocking fridge, being laughed at', '2009-04-02 17:02:41')[0m
+Redirected to http://www.example.com/interns
+Completed in 3ms (DB: 0) | 302 Found [http://www.example.com/interns]
+REQUESTING PAGE: GET http://www.example.com/interns with {} and HTTP headers {"HTTP_REFERER"=>"/interns"}
+
+
+Processing InternsController#index (for 127.0.0.1 at 2009-04-02 10:02:41) [GET]
+  [4;35;1mIntern Load (0.3ms)[0m   [0mSELECT * FROM "interns" [0m
+Rendering template within layouts/application
+Rendering interns/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://www.example.com/interns]
+REQUESTING PAGE: GET /interns/new with {} and HTTP headers {}
+
+
+Processing InternsController#new (for 127.0.0.1 at 2009-04-02 10:02:41) [GET]
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://www.example.com/interns/new]
+REQUESTING PAGE: POST /interns with {"intern"=>{"number"=>"Andrew", "smell"=>"tolerable", "indentured_servant"=>"0", "skills"=>""}, "commit"=>"Put To Work"} and HTTP headers {"HTTP_REFERER"=>"/interns/new"}
+
+
+Processing InternsController#create (for 127.0.0.1 at 2009-04-02 10:02:41) [POST]
+  Parameters: {"intern"=>{"number"=>"Andrew", "indentured_servant"=>"0", "smell"=>"tolerable", "skills"=>""}, "commit"=>"Put To Work"}
+Rendering template within layouts/application
+Rendering interns/new
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://www.example.com/interns]

@@ -2,7 +2,7 @@ class Intern < ActiveRecord::Base
 
 	validates_numericality_of :number
 	
-	def self.worst
+	def self.which_to_ridicule
 		Intern.all.map{ |intern| [intern.value_of_life, intern] }.sort.first.last
 	end
 	

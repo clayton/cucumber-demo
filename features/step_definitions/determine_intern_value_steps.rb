@@ -5,7 +5,7 @@ Given /^I have interns with the following attributes:$/ do |interns|
 end
 
 When /^I ask for the least valuable intern$/ do
-  @worst = Intern.worst
+  @worst = Intern.which_to_ridicule
 end
 
 Then /^I should find Intern with an id number of 5678$/ do
