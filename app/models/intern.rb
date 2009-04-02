@@ -1,2 +1,31 @@
 class Intern < ActiveRecord::Base
+
+	validates_numericality_of :number
+	
+	def self.worst
+		Intern.all.map{ |intern| [intern.value_of_life, intern] }.sort.first.last
+	end
+	
+	def value_of_life
+		smell_karma.to_f / debt_payment_timeframe.to_f
+	end
+	
+	def debt_payment_timeframe
+		# days
+		timeframe = indentured_servant? ? 365 : 90
+	end
+	
+	def smell_karma
+		karma = 1
+		case smell
+			when "tolerable"
+			karma += 2
+			when "bad"
+			karma -= 1
+			else
+			karma += 0
+		end
+		karma
+	end
+
 end

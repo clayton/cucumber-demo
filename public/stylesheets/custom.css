@@ -1,0 +1,20 @@
+/** CUSTOM JUNK **/
+
+div.flash_error{
+	padding: 1em;
+	margin: 1em auto;
+	background: #FFE6BF;
+	border: solid medium #FF9900;
+	font: bold 1.4em Arial;
+}
+
+div.flash_notice{
+	padding: 1em;
+	margin: 1em auto;
+	background: #BFFFBF;
+	border: solid medium #00CC00;
+	font: bold 1.4em Arial;
+}
+
+
+

@@ -1,22 +1,24 @@
 Feature: Manage interns
-  In order to [goal]
-  [stakeholder]
-  wants [behaviour]
+  In order to have cold soda
+  Jade
+  wants interns roaming around
   
-  Scenario: Register new intern
-    Given I am on the new intern page
-    And I press "Create"
-
-  Scenario: Delete intern
-    Given the following interns:
-      ||
-      ||
-      ||
-      ||
-      ||
-    When I delete the 3rd intern
-    Then I should see the following interns:
-      ||
-      ||
-      ||
-      ||
+  Scenario: Preparing to hire an Intern
+    Given I am on the interns page
+    When I follow "Create Intern"
+    Then I should be on the new intern page
+  
+  Scenario: Assimilating an Intern
+  	Given I am on the new intern page
+	  	And I fill in "ID Number" with "4567"
+	  	And I fill in "Skills" with "stocking fridge, being laughed at"
+	  	And I select "Bad" from "smell"
+	  	And I check "Indentured Servant"
+  	When I press "Put To Work"
+  	Then I should see "Success: Intern Put to Work!"
+  
+  Scenario: Interns do not have human names
+  	Given I am on the new intern page
+  		And I fill in "ID Number" with "Andrew"
+  	When I press "Put to Work"
+  	Then I should see "FAIL: You're dumber than an Intern!"

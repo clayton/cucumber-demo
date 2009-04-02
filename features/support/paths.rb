@@ -6,6 +6,10 @@ module NavigationHelpers
       root_path
     
     # Add more page name => path mappings here
+    when /the interns page/
+    	interns_path
+    when /the new intern page/
+    	new_intern_path
     
     else
       raise "Can't find mapping from \"#{page_name}\" to a path.\n" +

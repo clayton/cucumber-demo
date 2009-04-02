@@ -1,0 +1,7 @@
+<h2>Interns</h2>
+<ul>
+	<% @interns.each do |intern| %>
+		<li><%= link_to("Intern ##{intern.number}", intern_path(intern)) %></li>
+	<% end %>
+</ul>
+<p><%= link_to("Create Intern", new_intern_path) %></p>

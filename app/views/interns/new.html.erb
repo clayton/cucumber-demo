@@ -1,0 +1,23 @@
+<h2>New Intern</h2>
+<% form_for @intern do |form| %>
+	<p>
+		<%= label :intern, :number, "ID Number" %>
+		<%= form.text_field :number %>
+		<%= error_message_on :intern, :number %>
+	</p>
+	<p>
+		<%= label :intern, :skills, "Skills" %>
+		<%= form.text_field :skills %>
+	</p>
+	<p>
+		<%= label :intern, :smell, "Smell" %>
+		<%= form.select :smell, [["Tolerable", "tolerable"], ["Bad", "bad"]] %>
+	</p>
+	<p>
+		<%= label :intern, :indentured_servant, "Indentured Servant?" %>
+		<%= form.check_box :indentured_servant %>
+	</p>
+	<p>
+		<%= submit_tag("Put To Work") %>
+	</p>
+<% end %>
