@@ -60,3 +60,56 @@ ActionController::UnknownAction (No action responded to index. Actions: ):
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing InternsController#index (for 127.0.0.1 at 2009-04-01 19:31:31) [GET]
+Rendering interns/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/interns/]
+
+
+Processing InternsController#index (for 127.0.0.1 at 2009-04-01 19:33:13) [GET]
+Rendering interns/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/interns/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-01 19:33:16) [GET]
+
+NoMethodError (undefined method `camelize' for :interns:Symbol):
+  
+
+/!\ FAILSAFE /!\  Wed Apr 01 19:33:16 -0700 2009
+  Status: 500 Internal Server Error
+  
+ActionView::TemplateError (undefined method `humanize' for :interns:Symbol) in /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/templates/rescues/diagnostics.erb:
+
+    
+
+
+    In /library/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/templates/rescues/diagnostics.erb
+
+
+    
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-01 19:33:17) [GET]
+
+NoMethodError (undefined method `camelize' for :interns:Symbol):
+  
+
+/!\ FAILSAFE /!\  Wed Apr 01 19:33:17 -0700 2009
+  Status: 500 Internal Server Error
+  
+ActionView::TemplateError (undefined method `humanize' for :interns:Symbol) in /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/templates/rescues/diagnostics.erb:
+
+    
+
+
+    In /library/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/templates/rescues/diagnostics.erb
+
+
+    
+
+
+Processing InternsController#index (for 127.0.0.1 at 2009-04-01 19:33:26) [GET]
+Rendering interns/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://localhost/]
