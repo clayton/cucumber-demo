@@ -23,3 +23,4 @@ require File.expand_path(File.dirname(__FILE__) + '/../factories')
 # TODO - explain the addition of AUTOFEATURE=true in ~/.bash_profile
 # TODO - explain the addition of RSPEC=true in ~/.bash_profile
 # TODO - explain addition of features to exclusion list in rcov.opts
+# TODO - explain addition of --aggregate "coverage.data" in rcov.opts

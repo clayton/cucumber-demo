@@ -553,7 +553,7 @@ span.run100 {
 </style>
     </head>
   <body><h3>C0 code coverage information</h3>
-    <p>Generated on Thu Apr 02 21:07:44 -0700 2009 with <a href='http://eigenclass.org/hiki/rcov'>rcov 0.8.1.2</a>
+    <p>Generated on Thu Apr 02 21:25:55 -0700 2009 with <a href='http://eigenclass.org/hiki/rcov'>rcov 0.8.1.2</a>
       </p>
     <hr/>
     <pre><span class='marked0'>Code reported as executed by Ruby looks like this...
@@ -575,20 +575,20 @@ span.run100 {
         </td>
       <td class='lines_code'><tt>24</tt>
         </td>
-      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_total'>45.2%</tt>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_total'>90.3%</tt>
               &nbsp;</td>
-            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='45'/>
-                  <td class='uncovered' width='55'/>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='90'/>
+                  <td class='uncovered' width='10'/>
                   </tr>
                 </table>
               </td>
             </tr>
           </table>
         </td>
-      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_code'>33.3%</tt>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_code'>87.5%</tt>
               &nbsp;</td>
-            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='33'/>
-                  <td class='uncovered' width='67'/>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='88'/>
+                  <td class='uncovered' width='12'/>
                   </tr>
                 </table>
               </td>
@@ -603,12 +603,12 @@ span.run100 {
 </span><span class="marked0"><a name="line3"></a> 3 	validates_numericality_of :number
 </span><span class="inferred1"><a name="line4"></a> 4 	
 </span><span class="marked0"><a name="line5"></a> 5 	def self.which_to_ridicule
-</span><span class="uncovered1"><a name="line6"></a> 6 		Intern.all.map{ |intern| [intern.value_of_life, intern] }.sort.first.last
-</span><span class="uncovered0"><a name="line7"></a> 7 	end
+</span><span class="marked1"><a name="line6"></a> 6 		Intern.all.map{ |intern| [intern.value_of_life, intern] }.sort.first.last
+</span><span class="marked0"><a name="line7"></a> 7 	end
 </span><span class="inferred1"><a name="line8"></a> 8 	
 </span><span class="marked0"><a name="line9"></a> 9 	def value_of_life
-</span><span class="uncovered1"><a name="line10"></a>10 		smell_karma.to_f / debt_payment_timeframe.to_f
-</span><span class="uncovered0"><a name="line11"></a>11 	end
+</span><span class="marked1"><a name="line10"></a>10 		smell_karma.to_f / debt_payment_timeframe.to_f
+</span><span class="marked0"><a name="line11"></a>11 	end
 </span><span class="inferred1"><a name="line12"></a>12 	
 </span><span class="marked0"><a name="line13"></a>13 	def debt_payment_timeframe
 </span><span class="inferred1"><a name="line14"></a>14 		# days
@@ -616,19 +616,19 @@ span.run100 {
 </span><span class="marked1"><a name="line16"></a>16 	end
 </span><span class="inferred0"><a name="line17"></a>17 	
 </span><span class="marked1"><a name="line18"></a>18 	def smell_karma
-</span><span class="uncovered0"><a name="line19"></a>19 		karma = 1
-</span><span class="uncovered1"><a name="line20"></a>20 		case smell
-</span><span class="uncovered0"><a name="line21"></a>21 			when &quot;tolerable&quot;
-</span><span class="uncovered1"><a name="line22"></a>22 			karma += 2
-</span><span class="uncovered0"><a name="line23"></a>23 			when &quot;bad&quot;
-</span><span class="uncovered1"><a name="line24"></a>24 			karma -= 1
+</span><span class="marked0"><a name="line19"></a>19 		karma = 1
+</span><span class="marked1"><a name="line20"></a>20 		case smell
+</span><span class="marked0"><a name="line21"></a>21 			when &quot;tolerable&quot;
+</span><span class="marked1"><a name="line22"></a>22 			karma += 2
+</span><span class="marked0"><a name="line23"></a>23 			when &quot;bad&quot;
+</span><span class="marked1"><a name="line24"></a>24 			karma -= 1
 </span><span class="uncovered0"><a name="line25"></a>25 			else
 </span><span class="uncovered1"><a name="line26"></a>26 			karma += 0
 </span><span class="uncovered0"><a name="line27"></a>27 		end
-</span><span class="uncovered1"><a name="line28"></a>28 		karma
-</span><span class="uncovered0"><a name="line29"></a>29 	end
-</span><span class="uncovered1"><a name="line30"></a>30 
-</span><span class="uncovered0"><a name="line31"></a>31 end
+</span><span class="marked1"><a name="line28"></a>28 		karma
+</span><span class="inferred0"><a name="line29"></a>29 	end
+</span><span class="inferred1"><a name="line30"></a>30 
+</span><span class="inferred0"><a name="line31"></a>31 end
 </span></pre><hr/>
     <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a>
    version 0.8.1.2.</p>
