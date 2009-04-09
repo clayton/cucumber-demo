@@ -22,3 +22,10 @@ Feature: Manage interns
   		And I fill in "ID Number" with "Andrew"
   	When I press "Put to Work"
   	Then I should see "FAIL: You're dumber than an Intern!"
+
+  Scenario: Interns should be easy to get rid of
+    Given an existing intern
+      And I visit that intern's edit page
+    When I press "Dispose"
+    Then I should visit the interns page
+      And I should not see that intern listed 
