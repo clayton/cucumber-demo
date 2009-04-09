@@ -2,4 +2,5 @@
 <% Intern.column_names.each do |col| %>
 	<p><%= col.humanize %>: <%= @intern.send(col.to_sym) %></p>
 <% end %>
+<%= button_to("Dispose", intern_path(@intern), :method => "delete") %>
 <p><%= link_to("All Interns", interns_path) %></p>

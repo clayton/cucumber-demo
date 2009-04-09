@@ -23,4 +23,14 @@ class InternsController < ApplicationController
 		end
 	end
 
+  def destroy 
+    @intern = Intern.find(params[:id])
+    if @intern.destroy
+      flash[:notice] = "Intern Disposed Of"
+      redirect_to interns_url
+      else
+      flash[:error] = "Unable to dispose of intern, the uprising begins..."
+      render :action => "show"
+    end
+  end
 end
