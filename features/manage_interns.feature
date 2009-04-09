@@ -27,5 +27,5 @@ Feature: Manage interns
     Given an existing intern
       And I visit that intern's show page
     When I press "Dispose"
-    Then I should be on interns_path 
+    Then I should be on the interns page 
       And I should not see that intern listed 

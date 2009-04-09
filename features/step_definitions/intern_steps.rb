@@ -28,6 +28,6 @@ Given /^I visit that intern's show page$/ do
 end
 
 Then /^I should not see that intern listed$/ do
-  response.body.should_not have_selector("ul > a[href=#{intern_path(@intern)}]")
+  response.body.should_not have_selector("a", :href => intern_path(@intern))
 end
 

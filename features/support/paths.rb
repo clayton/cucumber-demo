@@ -4,6 +4,12 @@ module NavigationHelpers
     
     when /the homepage/
       root_path
+    when /the new intern_rules page/
+      new_intern_rules_path
+
+    when /the new intern_rules page/
+      new_intern_rules_path
+
     
     # Add more page name => path mappings here
     when /the interns page/
