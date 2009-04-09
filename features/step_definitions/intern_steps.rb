@@ -19,4 +19,19 @@ Then /^I should see the following interns:$/ do |interns|
   end
 end
 
+Given /^an existing intern$/ do
+  @intern = Factory.create(:intern) 
+end
+
+Given /^I visit that intern's show page$/ do
+ visit(intern_path(@intern)) 
+end
+
+Then /^I should visit the interns page$/ do
+  Given "I visit the interns page"
+end
+
+Then /^I should not see that intern listed$/ do
+  response.body.should_not have_selector("ul > a[href=#{intern_path(@intern)}]")
+end
 

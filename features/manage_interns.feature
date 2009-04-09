@@ -25,7 +25,7 @@ Feature: Manage interns
 
   Scenario: Interns should be easy to get rid of
     Given an existing intern
-      And I visit that intern's edit page
+      And I visit that intern's show page
     When I press "Dispose"
     Then I should visit the interns page
       And I should not see that intern listed 
