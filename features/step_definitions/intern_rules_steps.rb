@@ -1,20 +1,16 @@
-Given /^the following intern_rules:$/ do |intern_rules|
-  InternRules.create!(intern_rules.hashes)
+When /^I dispose of intern "(\d+)"$/ do |id_number|
+  Intern.find_by_number(id_number).destroy 
 end
 
-When /^I delete the (\d+)(?:st|nd|rd|th) intern_rules$/ do |pos|
-  visit intern_rules_url
-  within("table > tr:nth-child(#{pos.to_i+1})") do
-    click_link "Destroy"
-  end
+# DRY???
+
+Then /^I should only have intern "(\d+)"$/ do |id_number|
+  Intern.count.should == 1
+  Intern.first.number.should == id_number.to_i
 end
 
-Then /^I should see the following intern_rules:$/ do |intern_rules|
-  intern_rules.rows.each_with_index do |row, i|
-    row.each_with_index do |cell, j|
-      response.should have_selector("table > tr:nth-child(#{i+2}) > td:nth-child(#{j+1})") { |td|
-        td.inner_text.should == cell
-      }
-    end
-  end
+Then /^I should still have intern "(\d+)"$/ do |id_number|
+  Intern.count.should == 1
+  Intern.first.number.should == id_number.to_i
 end
+

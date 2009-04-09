@@ -1,7 +1,9 @@
 class Intern < ActiveRecord::Base
 
 	validates_numericality_of :number
-	
+
+  before_destroy :cover_shift
+
 	def self.which_to_ridicule
 		Intern.all.map{ |intern| [intern.value_of_life, intern] }.sort.first.last
 	end
@@ -27,5 +29,11 @@ class Intern < ActiveRecord::Base
 		end
 		karma
 	end
+
+  private
+
+  def cover_shift
+    false if Intern.count == 1
+  end
 
 end
